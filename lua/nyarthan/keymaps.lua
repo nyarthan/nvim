@@ -1,5 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 local key = U.make_key({ noremap = true, silent = true })
 

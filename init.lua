@@ -3,7 +3,11 @@ vim.g.maplocalleader = ' '
 
 require("nyarthan.bootstrap")
 
-require("lazy").setup("nyarthan.plugins")
+require("lazy").setup("nyarthan.plugins", {
+  defaults = {
+    lazy = true
+  }
+})
 
 require("nyarthan.util")
 require("nyarthan.options")

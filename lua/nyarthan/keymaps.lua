@@ -1,4 +1,3 @@
-
 local key = U.make_key({ noremap = true, silent = true })
 
 -- move in insert mode

@@ -13,6 +13,7 @@ local M = {
   { "williamboman/mason.nvim", config = true },
   { "williamboman/mason-lspconfig.nvim", config = true },
   { "neovim/nvim-lspconfig" },
+  { "nvim-treesitter/nvim-treesitter", build = "TSUpdate", config = require("nyarthan.treesitter").setup, lazy = true, event = "BufEnter" }
 }
 
 return M

@@ -1,5 +1,6 @@
 local M = {
   "folke/lazy.nvim",
+  "nvim-lua/plenary.nvim",
   { "catppuccin/nvim", name = "catppuccin", lazy = false, priority = 1000, config = function() vim.cmd([[colorscheme catppuccin]]) end },
   { "nvim-tree/nvim-tree.lua", config = true, lazy = false, dependencies = {"nvim-tree/nvim-web-devicons"} },
   { "hrsh7th/nvim-cmp", config = require("nyarthan.cmp").setup, event = "BufEnter", dependencies = {
@@ -15,7 +16,8 @@ local M = {
   { "williamboman/mason.nvim", config = true, cmd = "Mason" },
   { "williamboman/mason-lspconfig.nvim", config = true, event = "BufEnter" },
   { "neovim/nvim-lspconfig", event = "BufEnter" },
-  { "nvim-treesitter/nvim-treesitter", build = "TSUpdate", config = require("nyarthan.treesitter").setup, event = "BufEnter" }
+  { "nvim-treesitter/nvim-treesitter", build = "TSUpdate", config = require("nyarthan.treesitter").setup, event = "BufEnter" },
+  { "nvim-telescope/telescope.nvim", cmd = "Telescope", config = require("nyarthan.telescope").setup }
 }
 
 return M

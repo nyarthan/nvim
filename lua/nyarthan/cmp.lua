@@ -11,9 +11,11 @@ M.setup = function()
   })
 
   cmp.setup({
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+    snippet = {
+      expand = function(args)
+        luasnip.lsp_expand(args.body)
+      end
+    },
     mapping = cmp.mapping.preset.insert({
       ["<c-j>"] = cmp.mapping.select_next_item(),
       ["<c-k>"] = cmp.mapping.select_prev_item(),

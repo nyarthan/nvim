@@ -38,8 +38,12 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 require('lspconfig')['lua_ls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-    settings = require("nyarthan.lsp.settings.lua_ls")
+    capabilities = capabilities,
+    settings = require("nyarthan.lsp.settings.lua_ls"),
 }

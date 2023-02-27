@@ -1,9 +1,15 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local lspkind = require("lspkind")
 
 local M = {}
 
 M.setup = function()
+  lspkind.init({
+    mode = "text_symbol",
+    preset = "codicons"
+  })
+
   cmp.setup({
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -18,13 +24,33 @@ M.setup = function()
       ["<c-i>"] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources({
-      -- { name = "nvim_lsp" },
-      { name = "luasnip" },
-      { name = "nvim_lsp" },
+      { name = "nvim_lsp", priority = 10 },
+      { name = "nvim_lua", priority = 9 },
+      { name = "luasnip", priority = 8 },
     }, {
-      { name = "buffer" }
+      { name = "buffer", priority = 1 }
     })
-    ,experimental = { ghost_text = true}
+    ,experimental = { ghost_text = true},
+    window = {
+      completion = {
+        col_offset = -1,
+        side_padding = 0
+      }
+    },
+    formatting = {
+      format = lspkind.cmp_format({
+        mode = "symbol",
+        maxwidth = 50,
+        ellipsis_char = "...",
+        menu = ({
+          buffer = "[BUF]",
+          nvim_lsp = "[LSP]",
+          luasnip = "[SNP]",
+          nvim_lua = "[VIM]",
+        })
+      }),
+      fields = { "kind", "abbr", "menu" },
+    }
   })
 end
 

@@ -1,4 +1,5 @@
 local lspconfig = require('lspconfig')
+local formatter = require('nyarthan.formatter')
 
 lspconfig.lua_ls.setup({})
 lspconfig.rust_analyzer.setup({})
@@ -10,6 +11,8 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 local on_attach = function(client, bufnr)
+  formatter.on_attach(bufnr)
+
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 

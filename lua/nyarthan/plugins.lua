@@ -47,6 +47,11 @@ local M = {
     cmd = 'Telescope',
     config = require('nyarthan.telescope').setup,
   },
+  {
+    'mhartington/formatter.nvim',
+    event = 'BufEnter',
+    config = require('nyarthan.formatter').setup,
+  },
 }
 
 return M

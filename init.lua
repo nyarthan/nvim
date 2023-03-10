@@ -3,13 +3,12 @@ vim.g.maplocalleader = ' '
 
 require('nyarthan.bootstrap')
 
+require('nyarthan.util')
+require('nyarthan.options')
+require('nyarthan.keymaps').setup()
+
 require('lazy').setup('nyarthan.plugins', {
   defaults = {
     lazy = true,
   },
 })
-
-require('nyarthan.util')
-require('nyarthan.options')
-require('nyarthan.keymaps').setup()
-require('nyarthan.lsp')

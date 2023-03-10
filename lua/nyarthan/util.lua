@@ -7,7 +7,7 @@ U.bind = function(fn, ...)
   end
 end
 
-U.nv_cmd = vim.api.nvim_command
+U.cmd = vim.api.nvim_command
 
 U.key = vim.keymap.set
 
@@ -24,7 +24,7 @@ U.make_key = function(opts)
 end
 
 U.make_cmd = function(cmd)
-  return U.bind(U.nv_cmd, cmd)
+  return U.bind(U.cmd, cmd)
 end
 
 U.left_pad = function(str, length, char)

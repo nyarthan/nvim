@@ -33,8 +33,8 @@ end
 
 M.lsp = function(bufnr)
   local key = U.make_key({ noremap = true, silent = true, buffer = bufnr })
-  key('n', 'gD', vim.lsp.buf.declaration)
 
+  key('n', 'gD', vim.lsp.buf.declaration)
   key('n', 'gd', vim.lsp.buf.definition)
   key('n', 'gh', vim.lsp.buf.hover)
   key('n', 'gi', vim.lsp.buf.implementation)
@@ -55,6 +55,17 @@ M.lsp = function(bufnr)
   key('n', 'gnd', vim.diagnostic.goto_prev)
   key('n', 'gNd', vim.diagnostic.goto_next)
   key('n', '<leader>q', vim.diagnostic.setloclist)
+end
+
+-- keys starting with `<leader>t` to lazy load telescope
+M.telescope = function()
+  local key = U.make_key({ noremap = true, silent = true })
+
+  key('n', '<leader>tf', U.make_cmd('Telescope find_files'))
+  key('n', '<leader>tt', U.make_cmd('Telescope live_grep'))
+  key('n', '<leader>t*', U.make_cmd('Telescope grep_string'))
+  key('n', '<leader>t<cr>', U.make_cmd('Telescope resume'))
+  key('n', '<leader>tgs', U.make_cmd('Telescope git_status'))
 end
 
 return M

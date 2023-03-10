@@ -48,6 +48,7 @@ local M = {
     'nvim-telescope/telescope.nvim',
     cmd = 'Telescope',
     config = require('nyarthan.telescope').setup,
+    keys = '<leader>t',
   },
   {
     'mhartington/formatter.nvim',

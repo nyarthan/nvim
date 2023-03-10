@@ -11,5 +11,5 @@ require('lazy').setup('nyarthan.plugins', {
 
 require('nyarthan.util')
 require('nyarthan.options')
-require('nyarthan.keymaps')
+require('nyarthan.keymaps').setup()
 require('nyarthan.lsp')

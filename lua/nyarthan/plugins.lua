@@ -33,7 +33,7 @@ local M = {
   },
   { 'williamboman/mason.nvim', config = true, cmd = 'Mason' },
   { 'williamboman/mason-lspconfig.nvim', config = true, event = 'BufEnter' },
-  { 'neovim/nvim-lspconfig', event = 'BufEnter' },
+  { 'neovim/nvim-lspconfig', event = 'BufEnter', config = require("nyarthan.lsp").setup },
   {
     'nvim-treesitter/nvim-treesitter',
     lazy = false,

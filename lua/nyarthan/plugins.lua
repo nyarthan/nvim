@@ -55,6 +55,11 @@ local M = {
     event = 'BufEnter',
     config = require('nyarthan.formatter').setup,
   },
+  {
+    'numToStr/FTerm.nvim',
+    keys = '<c-\\>',
+    config = require('nyarthan.terminal').setup,
+  },
 }
 
 return M

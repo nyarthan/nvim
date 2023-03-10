@@ -68,4 +68,10 @@ M.telescope = function()
   key('n', '<leader>tgs', U.make_cmd('Telescope git_status'))
 end
 
+M.terminal = function()
+  local key = U.make_key({ noremap = true, silent = true })
+
+  key('n', '<c-\\>', require('FTerm').toggle)
+end
+
 return M

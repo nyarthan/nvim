@@ -1,15 +1,15 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("nyarthan.bootstrap")
+require('nyarthan.bootstrap')
 
-require("lazy").setup("nyarthan.plugins", {
+require('lazy').setup('nyarthan.plugins', {
   defaults = {
-    lazy = true
-  }
+    lazy = true,
+  },
 })
 
-require("nyarthan.util")
-require("nyarthan.options")
-require("nyarthan.keymaps")
-require("nyarthan.lsp")
+require('nyarthan.util')
+require('nyarthan.options')
+require('nyarthan.keymaps')
+require('nyarthan.lsp')

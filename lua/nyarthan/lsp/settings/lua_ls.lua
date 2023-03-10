@@ -1,17 +1,17 @@
 return {
   Lua = {
     runtime = {
-      version = 'LuaJIT'
+      version = 'LuaJIT',
     },
     diagnostics = {
-      globals = { "vim" }
+      globals = { 'vim' },
     },
     workspace = {
-      library = vim.api.nvim_get_runtime_file("", true),
-      checkThirdParty = false
+      library = vim.api.nvim_get_runtime_file('', true),
+      checkThirdParty = false,
     },
     telemetry = {
-      enable = false
-    }
-  }
+      enable = false,
+    },
+  },
 }

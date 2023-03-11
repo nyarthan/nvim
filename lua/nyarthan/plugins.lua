@@ -65,6 +65,11 @@ local M = {
     event = 'BufEnter',
     config = require('nyarthan.autopairs').setup,
   },
+  {
+    'lewis6991/gitsigns.nvim',
+    event = 'BufEnter',
+    config = true,
+  },
 }
 
 return M

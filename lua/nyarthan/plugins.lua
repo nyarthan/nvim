@@ -60,6 +60,11 @@ local M = {
     keys = '<c-\\>',
     config = require('nyarthan.terminal').setup,
   },
+  {
+    'windwp/nvim-autopairs',
+    event = 'BufEnter',
+    config = require('nyarthan.autopairs').setup,
+  },
 }
 
 return M

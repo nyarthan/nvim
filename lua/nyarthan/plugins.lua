@@ -63,7 +63,7 @@ local M = {
   {
     'windwp/nvim-autopairs',
     event = 'BufEnter',
-    config = require('nyarthan.autopairs').setup,
+    config = true,
   },
   {
     'lewis6991/gitsigns.nvim',

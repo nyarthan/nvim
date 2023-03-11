@@ -38,12 +38,12 @@ local M = {
   },
   {
     'nvim-treesitter/nvim-treesitter',
-    lazy = false,
     build = 'TSUpdate',
     config = require('nyarthan.treesitter').setup,
     event = 'BufEnter',
   },
   { 'nvim-treesitter/playground', cmd = 'TSPlayground' },
+  { 'JoosepAlviste/nvim-ts-context-commentstring', event = 'BufEnter' },
   {
     'nvim-telescope/telescope.nvim',
     cmd = 'Telescope',
@@ -69,6 +69,11 @@ local M = {
     'lewis6991/gitsigns.nvim',
     event = 'BufEnter',
     config = true,
+  },
+  {
+    'numToStr/Comment.nvim',
+    config = require('nyarthan.comment').setup,
+    keys = { 'gc', 'gb' },
   },
 }
 

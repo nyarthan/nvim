@@ -1,10 +1,8 @@
-
-
 local U = {}
 
 U.setup = function()
   local configs = require('nvim-treesitter.configs')
-  
+
   configs.setup({
     ensure_installed = {
       'lua',
@@ -24,6 +22,11 @@ U.setup = function()
 
     playground = {
       enable = true,
+    },
+
+    context_commentstring = {
+      enable = true,
+      enable_autocmd = false,
     },
   })
 end

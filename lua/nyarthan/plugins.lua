@@ -75,6 +75,7 @@ local M = {
     config = require('nyarthan.comment').setup,
     keys = { 'gc', 'gb' },
   },
+  'b0o/SchemaStore.nvim',
 }
 
 return M

@@ -55,6 +55,12 @@ M.setup = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
+
+  lsp_config['jsonls'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = require('nyarthan.lsp.settings.jsonls'),
+  })
 end
 
 return M

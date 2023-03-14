@@ -36,10 +36,10 @@ M.lsp = function(bufnr)
 
   key('n', 'gD', vim.lsp.buf.declaration)
   key('n', 'gd', vim.lsp.buf.definition)
-  key('n', 'gh', vim.lsp.buf.hover)
+  key('n', 'K', vim.lsp.buf.hover)
+  key('n', '<a-k>', vim.lsp.buf.signature_help)
   key('n', 'gi', vim.lsp.buf.implementation)
   key('n', 'ge', vim.diagnostic.open_float)
-  key('n', '<c-k>', vim.lsp.buf.signature_help)
   key('n', '<leader>wa', vim.lsp.buf.add_workspace_folder)
   key('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder)
   key(

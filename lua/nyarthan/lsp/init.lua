@@ -61,6 +61,11 @@ M.setup = function()
     capabilities = capabilities,
     settings = require('nyarthan.lsp.settings.jsonls'),
   })
+
+  lsp_config['rust_analyzer'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
 end
 
 return M

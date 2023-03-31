@@ -10,9 +10,9 @@ local M = {
   },
   {
     'nvim-tree/nvim-tree.lua',
-    config = true,
     lazy = false,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = require('nyarthan.nvim_tree').setup,
   },
   {
     'hrsh7th/nvim-cmp',

@@ -66,6 +66,11 @@ M.setup = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
+
+  lsp_config['astro'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+  })
 end
 
 return M

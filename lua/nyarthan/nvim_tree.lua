@@ -3,8 +3,6 @@ local M = {}
 M.setup = function()
   require('nvim-tree').setup({
     disable_netrw = true,
-    open_on_setup = false,
-    open_on_setup_file = false,
     auto_reload_on_write = true,
     create_in_closed_folder = false,
     open_on_tab = false,
@@ -37,7 +35,6 @@ M.setup = function()
     view = {
       adaptive_size = false,
       centralize_selection = true,
-      hide_root_folder = true,
       width = 50,
       side = 'left',
       preserve_window_proportions = true,
@@ -50,6 +47,7 @@ M.setup = function()
       },
     },
     renderer = {
+      root_folder_label = false,
       add_trailing = false,
       group_empty = false,
       full_name = true,

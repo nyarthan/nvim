@@ -42,7 +42,6 @@ local M = {
     config = require('nyarthan.treesitter').setup,
     event = 'BufEnter',
   },
-  { 'nvim-treesitter/playground', cmd = 'TSPlayground' },
   { 'JoosepAlviste/nvim-ts-context-commentstring', event = 'BufEnter' },
   {
     'nvim-telescope/telescope.nvim',

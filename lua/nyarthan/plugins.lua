@@ -75,6 +75,10 @@ local M = {
     keys = { 'gc', 'gb' },
   },
   'b0o/SchemaStore.nvim',
+  {
+    'folke/trouble.nvim',
+    event = 'BufEnter',
+  },
 }
 
 return M

@@ -72,7 +72,7 @@ local M = {
   {
     'numToStr/Comment.nvim',
     config = require('nyarthan.comment').setup,
-    keys = { 'gc', 'gb' },
+    event = 'BufEnter',
   },
   'b0o/SchemaStore.nvim',
   {

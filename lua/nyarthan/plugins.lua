@@ -79,6 +79,10 @@ local M = {
     'folke/trouble.nvim',
     event = 'BufEnter',
   },
+  {
+    'jose-elias-alvarez/typescript.nvim',
+    event = 'BufEnter',
+  },
 }
 
 return M

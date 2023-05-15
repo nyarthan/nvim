@@ -41,8 +41,7 @@ M.setup = function()
   end
 
   local servers = {
-    { name = 'lus_ls', settings = require('nyarthan.lsp.settings.lua_ls') },
-    { name = 'tsserver' },
+    { name = 'lua_ls', settings = require('nyarthan.lsp.settings.lua_ls') },
     { name = 'eslint' },
     { name = 'jsonls', settings = require('nyarthan.lsp.settings.jsonls') },
     { name = 'rust_analyzer' },
@@ -61,6 +60,16 @@ M.setup = function()
       settings = server.settings,
     })
   end
+
+  require('typescript').setup({
+    go_to_source_definition = {
+      fallback = true,
+    },
+    server = {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    },
+  })
 end
 
 return M

@@ -71,6 +71,12 @@ M.setup = function()
     on_attach = on_attach,
     capabilities = capabilities,
   })
+
+  lsp_config['tailwindcss'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = require('nyarthan.lsp.settings.tailwindcss'),
+  })
 end
 
 return M

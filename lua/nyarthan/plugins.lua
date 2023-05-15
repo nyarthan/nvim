@@ -83,6 +83,11 @@ local M = {
     'jose-elias-alvarez/typescript.nvim',
     event = 'BufEnter',
   },
+  {
+    'zbirenbaum/copilot.lua',
+    event = 'BufEnter',
+    -- config = require('nyarthan.copilot').setup,
+  },
 }
 
 return M

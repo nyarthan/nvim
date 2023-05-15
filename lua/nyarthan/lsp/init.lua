@@ -40,43 +40,27 @@ M.setup = function()
     require('nyarthan.keymaps').lsp(bufnr)
   end
 
-  lsp_config['lua_ls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = require('nyarthan.lsp.settings.lua_ls'),
-  })
+  local servers = {
+    { name = 'lus_ls', settings = require('nyarthan.lsp.settings.lua_ls') },
+    { name = 'tsserver' },
+    { name = 'eslint' },
+    { name = 'jsonls', settings = require('nyarthan.lsp.settings.jsonls') },
+    { name = 'rust_analyzer' },
+    { name = 'astro' },
+    {
+      name = 'tailwindcss',
+      settings = require('nyarthan.lsp.settings.tailwindcss'),
+    },
+    { name = 'prismals' },
+  }
 
-  lsp_config['tsserver'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
-
-  lsp_config['eslint'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
-
-  lsp_config['jsonls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = require('nyarthan.lsp.settings.jsonls'),
-  })
-
-  lsp_config['rust_analyzer'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
-
-  lsp_config['astro'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
-
-  lsp_config['tailwindcss'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = require('nyarthan.lsp.settings.tailwindcss'),
-  })
+  for _, server in ipairs(servers) do
+    lsp_config[server.name].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = server.settings,
+    })
+  end
 end
 
 return M

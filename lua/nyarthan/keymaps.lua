@@ -34,8 +34,17 @@ end
 M.lsp = function(bufnr)
   local key = U.make_key({ noremap = true, silent = true, buffer = bufnr })
 
+  local function definition()
+    local filetype = vim.bo.filetype
+    if filetype == 'typescript' or filetype == 'typescriptreact' then
+      U.cmd('TypescriptGoToSourceDefinition')
+    else
+      vim.lsp.buf.definition()
+    end
+  end
+
   key('n', 'gD', vim.lsp.buf.declaration)
-  key('n', 'gd', vim.lsp.buf.definition)
+  key('n', 'gd', definition)
   key('n', 'K', vim.lsp.buf.hover)
   key('n', '<a-k>', vim.lsp.buf.signature_help)
   key('n', 'gi', vim.lsp.buf.implementation)

@@ -88,6 +88,11 @@ local M = {
     event = 'BufEnter',
     -- config = require('nyarthan.copilot').setup,
   },
+  {
+    'andweeb/presence.nvim',
+    lazy = false,
+    config = require('nyarthan.presence').setup,
+  },
 }
 
 return M

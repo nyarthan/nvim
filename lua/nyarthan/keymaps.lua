@@ -52,8 +52,8 @@ M.lsp = function(bufnr)
   key('n', 'ga', vim.lsp.buf.code_action)
   key('n', 'gR', vim.lsp.buf.references)
   key('n', 'gf', U.bind(vim.lsp.buf.format, { async = true }))
-  key('n', 'gnd', vim.diagnostic.goto_prev)
-  key('n', 'gNd', vim.diagnostic.goto_next)
+  key('n', 'gnd', vim.diagnostic.goto_next)
+  key('n', 'gNd', vim.diagnostic.goto_prev)
   key('n', '<leader>q', vim.diagnostic.setloclist)
 end
 

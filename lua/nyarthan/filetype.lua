@@ -5,6 +5,13 @@ M.setup = function()
     overrides = {
       extensions = {
         mdx = 'markdown',
+        json = 'jsonc',
+      },
+      literal = {
+        ['.gitignore'] = 'gitignore',
+        ['.prettierignore'] = 'gitignore',
+        ['.prettierrc'] = 'jsonc',
+        ['.eslintrc'] = 'jsonc',
       },
     },
   })

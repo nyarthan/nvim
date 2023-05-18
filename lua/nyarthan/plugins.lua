@@ -93,6 +93,11 @@ local M = {
     lazy = false,
     config = require('nyarthan.presence').setup,
   },
+  {
+    'nathom/filetype.nvim',
+    lazy = false,
+    config = require('nyarthan.filetype').setup,
+  },
 }
 
 return M

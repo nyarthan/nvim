@@ -12,6 +12,10 @@ M.setup = function()
         ['.prettierignore'] = 'gitignore',
         ['.prettierrc'] = 'jsonc',
         ['.eslintrc'] = 'jsonc',
+        ['.env'] = 'sh',
+        ['.env.development'] = 'sh',
+        ['.env.production'] = 'sh',
+        ['.env.local'] = 'sh',
       },
     },
   })

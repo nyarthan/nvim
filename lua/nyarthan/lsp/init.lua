@@ -51,6 +51,7 @@ M.setup = function()
       settings = require('nyarthan.lsp.settings.tailwindcss'),
     },
     { name = 'prismals' },
+    { name = 'jedi_language_server' },
   }
 
   for _, server in ipairs(servers) do

@@ -89,11 +89,6 @@ local M = {
     -- config = require('nyarthan.copilot').setup,
   },
   {
-    'andweeb/presence.nvim',
-    lazy = false,
-    config = require('nyarthan.presence').setup,
-  },
-  {
     'nathom/filetype.nvim',
     lazy = false,
     config = require('nyarthan.filetype').setup,

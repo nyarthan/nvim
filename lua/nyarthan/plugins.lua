@@ -86,12 +86,17 @@ local M = {
   {
     'zbirenbaum/copilot.lua',
     event = 'BufEnter',
-    -- config = require('nyarthan.copilot').setup,
+    config = require('nyarthan.copilot').setup,
   },
   {
     'nathom/filetype.nvim',
     lazy = false,
     config = require('nyarthan.filetype').setup,
+  },
+  {
+    'karb94/neoscroll.nvim',
+    lazy = false,
+    config = require('nyarthan.neoscroll').setup,
   },
 }
 

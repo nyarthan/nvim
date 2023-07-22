@@ -5,7 +5,8 @@ M.setup = function()
     overrides = {
       extensions = {
         mdx = 'markdown',
-        json = 'jsonc',
+        -- json = 'jsonc',
+        tf = 'terraform',
       },
       literal = {
         ['.gitignore'] = 'gitignore',

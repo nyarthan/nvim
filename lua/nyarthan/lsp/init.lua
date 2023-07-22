@@ -52,6 +52,9 @@ M.setup = function()
     },
     { name = 'prismals' },
     { name = 'jedi_language_server' },
+    { name = 'terraformls' },
+    { name = 'cssls' },
+    { name = 'stylelint_lsp' },
   }
 
   for _, server in ipairs(servers) do

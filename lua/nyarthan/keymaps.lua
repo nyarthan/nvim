@@ -4,10 +4,10 @@ M.setup = function()
   local key = U.make_key({ noremap = true, silent = true })
 
   -- move in insert mode
-  key('i', '<c-h>', '<left>')
-  key('i', '<c-j>', '<down>')
-  key('i', '<c-k>', '<up>')
-  key('i', '<c-l>', '<right>')
+  key('i', '<c-h>', U.make_cmd('TmuxNavigateLeft'))
+  key('i', '<c-j>', U.make_cmd('TmuxNavigateDown'))
+  key('i', '<c-k>', U.make_cmd('TmuxNavigateUp'))
+  key('i', '<c-l>', U.make_cmd('TmuxNavigateRight'))
 
   -- switch windows
   key('n', '<c-h>', '<c-w>h')

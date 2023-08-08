@@ -98,6 +98,10 @@ local M = {
     lazy = false,
     config = require('nyarthan.neoscroll').setup,
   },
+  {
+    'christoomey/vim-tmux-navigator',
+    lazy = false,
+  },
 }
 
 return M
